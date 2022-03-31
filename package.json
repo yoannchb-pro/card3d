@@ -1,0 +1,26 @@
+{
+  "name": "card3d",
+  "version": "1.0.0",
+  "description": "Create 3d card like vanilla tilt js",
+  "main": "./src/card3d.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoannchb-pro/card3d.git"
+  },
+  "keywords": [
+    "card",
+    "tilt",
+    "3d",
+    "mouse",
+    "js"
+  ],
+  "author": "yoannchb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoannchb-pro/card3d/issues"
+  },
+  "homepage": "https://github.com/yoannchb-pro/card3d#readme"
+}

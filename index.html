@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card3d.js</title>
+
+    <meta name="title" content="Parallaxy.js || Create beautiful parallax">
+    <meta name="description" content="Create beautiful parallax with attributes or in javascript">
+    <meta name="keywords" content="html, js, css, vuejs, parallax, vue3, parralaxy, animation, image, cool">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="yoannchb">
+
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark-reasonable.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="src/card3d.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="https://github.com/yoannchb-pro/Card3d">
+                <h1>Card3d.js</h1>
+            </a>
+        </header>
+
+        <div class="pres">
+            <h3 class="title">Installation ?</h3>
+            <h3>NPM</h3>
+            <pre>
+                <code class="language-bash">
+npm i card3d
+                </code>
+            </pre>
+            <pre>
+                <code class="language-javascript">
+const initCard3d = require("card3d");
+
+//Vue.js
+import initCard3d from "card3d/src/card3d.js";
+Vue.use(initCard3d);
+
+//How to add other elements ?
+//First create an element and set his card3d attributes
+//after use initCard3d(element list)
+initCard3d(document.querySelectorAll('[data-card3d]')));
+                </code>
+            </pre>
+            <h3>CDN</h3>
+            <pre>
+                <code class="language-html">
+https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/src/card3d.min.js
+                </code>
+            </pre>
+            <h3>GITHUB</h3>
+            <pre>
+                <code class="language-html">
+./src/card3d.js
+                </code>
+            </pre>
+        </div>
+
+
+        <div class="pres">
+            <h3 class="title">Simple example</h3>
+            <div class="card-container">
+                <div class="card" data-card3d></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example with glare</h3>
+            <div class="card-container">
+                <div class="card card2" data-card3d data-card3d-glare="0.7"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d data-card3d-glare="0.7"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example with other perspective and delta</h3>
+            <div class="card-container">
+                <div class="card card3" data-card3d data-card3d-perspective="1000" data-card3d-delta="40"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d  data-card3d-perspective="1000" data-card3d-delta="40"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example reversed</h3>
+            <div class="card-container">
+                <div class="card card4" data-card3d data-card3d-reverse="true"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d data-card3d-reverse="true"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example with no reset</h3>
+            <div class="card-container">
+                <div class="card card5" data-card3d data-card3d-reset="false"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d data-card3d-reset="false"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example with full page listening</h3>
+            <div class="card-container">
+                <div class="card card6" data-card3d data-card3d-full-page-listening="true"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d data-card3d-full-page-listening="true"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example with scale</h3>
+            <div class="card-container">
+                <div class="card card7" data-card3d data-card3d-scale="1.1"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d data-card3d-scale="1.1"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example with start X and Y</h3>
+            <div class="card-container">
+                <div class="card card8" data-card3d data-card3d-start-x="20" data-card3d-start-y="20"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d data-card3d-start-x="20" data-card3d-start-y="20"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">Simple example with axis</h3>
+            <div class="card-container">
+                <div class="card card9" data-card3d data-card3d-axis="x"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d  data-card3d-axis="x"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+
+        <div class="pres">
+            <h3 class="title">How to stop</h3>
+            <div class="card-container">
+                <div class="card card10" data-card3d data-card3d-stop="true"></div>
+            </div>
+            <!-- CODE -->
+            <h3>HTML</h3>
+            <pre>
+                <code class="language-html">
+    <div data-card3d data-card3d-stop="true"></div>
+                </code>
+            </pre>
+            <!-- END CODE -->
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelectorAll("code.language-html").forEach(function(element) {
+        element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    });
+</script>
+</html>
