@@ -10,6 +10,9 @@ Inspired from vanilla tilt js just for fun
 <img src="./assets/Animation.gif" alt="GIF ANIMATION"></img>
 
 ## Update
+v1.0.1
+- Doc update
+
 v1.0.0
 - Initial commit
 
@@ -42,4 +45,4 @@ initCard3d(document.querySelectorAll('[data-card3d]')));
 
 ## Documentation
 
-- [Documentation on the github page](https://yoannchb-pro.github.io/Card3d/index.html)
+- [Documentation on the github page](https://yoannchb-pro.github.io/card3d/index.html)
