@@ -51,7 +51,7 @@ body, html{
     overflow: hidden;
 
     background-color: #1b1a17;
-    box-shadow: 0 0 2rem rgba(255,255,255,0.3);
+    box-shadow: 0 0 3rem rgba(255,255,255,0.1);
 }
 
 header{
@@ -82,7 +82,7 @@ header h1{
 }
 
 .card{
-    box-shadow: 0 0 2rem rgba(255,255,255,0.3);
+    box-shadow: 0 0 2rem rgba(255,255,255,0.2);
     border-radius: 0.5rem;
     width: 20rem;
     height: 20rem;
