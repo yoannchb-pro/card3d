@@ -10,6 +10,9 @@ Inspired from vanilla tilt js just for fun
 <img src="./assets/Animation.gif" alt="GIF ANIMATION"></img>
 
 ## Update
+v1.0.4
+-Forgot to push dist directory ;)
+
 v1.0.3
 - Added observer
 
