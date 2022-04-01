@@ -10,37 +10,40 @@ Inspired from vanilla tilt js just for fun
 <img src="./assets/Animation.gif" alt="GIF ANIMATION"></img>
 
 ## Update
-v1.0.1
-- Doc update
-
-v1.0.0
-- Initial commit
+v1.0.3
+- Added observer
 
 ## NPM
 ```
 npm i card3d
 ```
 ```js
-const initCard3d = require("card3d");
+//Node.js
+const Card3d = require("card3d");
 
-//Vue.js
-import initCard3d from "card3d/src/card3d.js";
-Vue.use(initCard3d);
+//Vue.js example
+import Card3d from "card3d/dist/card3d.js";
+Vue.use(Card3d);
 
-//How to add other elements ?
-//First create an element and set his card3d attributes
-//after use initCard3d(element list)
-initCard3d(document.querySelectorAll('[data-card3d]')));
+//should be a querySelector not querySelectorAll
+const card = new Card3d(document.querySelector('.card'), {
+    glare: 0.7,
+});
+//equal to do <div class="card" data-card3d data-card3d-glare="0.7"></div>
+
+//methods
+card.stop();
+card.start();
 ```
 
 ## CDN
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/src/card3d.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/dist/card3d.min.js"></script>
 ```
 
 ## GITHUB
 ```html
-<script type="text/javascript" src="./src/card3d.js"></script>
+<script type="text/javascript" src="./dist/card3d.js"></script>
 ```
 
 ## Documentation

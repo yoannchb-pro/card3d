@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
-    <script src="src/card3d.js"></script>
+    <script src="dist/card3d.js"></script>
 </head>
 <body>
     <div class="container">
@@ -32,28 +32,33 @@ npm i card3d
             </pre>
             <pre>
                 <code class="language-javascript">
-const initCard3d = require("card3d");
+//Node.js
+const Card3d = require("card3d");
 
-//Vue.js
-import initCard3d from "card3d/src/card3d.js";
-Vue.use(initCard3d);
+//Vue.js example
+import Card3d from "card3d/dist/card3d.js";
+Vue.use(Card3d);
 
-//How to add other elements ?
-//First create an element and set his card3d attributes
-//after use initCard3d(element list)
-initCard3d(document.querySelectorAll('[data-card3d]')));
+//should be a querySelector not querySelectorAll
+const card = new Card3d(document.querySelector('.card'), {
+    glare: 0.7,
+});
+
+//methods
+card.stop();
+card.start();
                 </code>
             </pre>
             <h3>CDN</h3>
             <pre>
                 <code class="language-html">
-https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/src/card3d.min.js
+https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/dist/card3d.min.js
                 </code>
             </pre>
             <h3>GITHUB</h3>
             <pre>
                 <code class="language-html">
-./src/card3d.js
+./dist/card3d.js
                 </code>
             </pre>
         </div>
@@ -77,7 +82,7 @@ https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/src/card3d.min.js
         <div class="pres">
             <h3 class="title">Simple example with glare</h3>
             <div class="card-container">
-                <div class="card card2" data-card3d data-card3d-glare="0.7"></div>
+                <div class="card card2"></div>
             </div>
             <!-- CODE -->
             <h3>HTML</h3>
@@ -213,6 +218,10 @@ https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/src/card3d.min.js
 <script>
     document.querySelectorAll("code.language-html").forEach(function(element) {
         element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+    });
+
+    const glare = new Card3d(document.querySelector('.card2'), {
+        glare: 0.4
     });
 </script>
 </html>
