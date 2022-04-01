@@ -44,14 +44,15 @@ npm i card3d
                 <code class="language-javascript">
 //Node.js
 const Card3d = require("card3d");
+import Card3d from "card3d";
 
 //Vue.js example
-import Card3d from "card3d/dist/card3d.js";
-Vue.use(Card3d);
+import "card3d";
 
 //should be a querySelector not querySelectorAll
 const card = new Card3d(document.querySelector('.card'), {
     glare: 0.7,
+    //all attributes can ba placed as configuration (data-card3d-delta="0.8" -> delta: 0.8)
 });
 
 //methods

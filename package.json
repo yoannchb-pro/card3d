@@ -1,6 +1,6 @@
 {
   "name": "card3d",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "Create 3d card like vanilla tilt js",
   "main": "./src/card3d.js",
   "scripts": {
