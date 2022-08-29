@@ -1,11 +1,11 @@
 {
   "name": "card3d",
-  "version": "2.0.0",
+  "version": "2.5.0",
   "description": "Create 3d card like vanilla tilt js",
-  "main": "./src/card3d.js",
+  "main": "./dist/card3d.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel src --out-dir dist"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -27,7 +27,8 @@
   "devDependencies": {
     "@babel/cli": "^7.16.8",
     "@babel/core": "^7.16.12",
-    "@babel/preset-env": "^7.16.11"
-  },
-  "dependencies": {}
+    "@babel/preset-env": "^7.16.11",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.2"
+  }
 }
