@@ -40,36 +40,32 @@
 npm i card3d
                 </code>
             </pre>
-            <pre>
-                <code class="language-javascript">
-//Node.js
-const Card3d = require("card3d");
-import Card3d from "card3d";
-
-//Vue.js example
-import "card3d";
-
-//should be a querySelector not querySelectorAll
-const card = new Card3d(document.querySelector('.card'), {
-    glare: 0.7,
-    //all attributes can ba placed as configuration (data-card3d-delta="0.8" -> delta: 0.8)
-});
-
-//methods
-card.stop();
-card.start();
-                </code>
-            </pre>
             <h3>CDN</h3>
             <pre>
                 <code class="language-html">
 https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/dist/card3d.min.js
                 </code>
             </pre>
-            <h3>GITHUB</h3>
+            <h3>Import</h3>
             <pre>
-                <code class="language-html">
-./dist/card3d.js
+                <code class="language-javascript">
+const Card3d = require("card3d");
+import Card3d from "card3d";
+import "card3d";
+                </code>
+            </pre>
+            <h3>Without attributes in JS</h3>
+            <pre>
+                <code>
+//all attributes can ba placed as configuration (data-card3d-delta="0.8" -> delta: 0.8)
+const card = new Card3d(
+    document.querySelector('.card'), 
+    { glare: 0.7 }
+);
+
+//methods
+card.stop();
+card.start();
                 </code>
             </pre>
         </div>
