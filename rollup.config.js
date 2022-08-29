@@ -7,7 +7,7 @@ export default {
   output: [
     {
       file: pkg.main,
-      name: "card3d",
+      name: "Card3d",
       format: "umd",
       sourcemap: true,
     },
