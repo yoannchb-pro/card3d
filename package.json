@@ -1,8 +1,9 @@
 {
   "name": "card3d",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Create 3d card effect for your website with only attributes",
   "main": "./dist/card3d.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"
