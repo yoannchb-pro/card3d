@@ -1,234 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card3d.js</title>
 
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css" />
 
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <meta name="title" content="Card3d.js || Create beautiful 3d card">
-    <meta name="description" content="Create beautiful 3d card like vanilla tilt js">
-    <meta name="keywords" content="html, js, css, vuejs, card, vue3, 3d, animation, cool">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <meta name="author" content="yoannchb">
+    <meta name="title" content="Card3d.js || Create beautiful 3d card" />
+    <meta
+      name="description"
+      content="Create beautiful 3d card like vanilla tilt js"
+    />
+    <meta
+      name="keywords"
+      content="html, js, css, vuejs, card, vue3, 3d, animation, cool"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <meta name="author" content="yoannchb" />
 
-    <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark-reasonable.css">
+    <link
+      rel="stylesheet"
+      href="https://highlightjs.org/static/demo/styles/atom-one-dark-reasonable.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
 
     <script src="./dist/card3d.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <a href="https://github.com/yoannchb-pro/Card3d">
-                <h1>Card3d.js</h1>
-            </a>
-        </header>
+      <header>
+        <a href="https://github.com/yoannchb-pro/Card3d">
+          <h1>Card3d.js</h1>
+        </a>
+      </header>
 
-        <div class="pres">
-            <h3 class="title">Installation ?</h3>
-            <h3>NPM</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Installation ?</h3>
+        <h3>NPM</h3>
+        <pre>
                 <code class="language-bash">
 npm i card3d
                 </code>
             </pre>
-            <h3>CDN</h3>
-            <pre>
+        <h3>CDN</h3>
+        <pre>
                 <code class="language-html">
-https://cdn.jsdelivr.net/gh/yoannchb-pro/Card3d/dist/card3d.min.js
+https://unpkg.com/card3d@2.6.0/dist/card3d.js
                 </code>
             </pre>
-            <h3>Import</h3>
-            <pre>
+        <h3>Import</h3>
+        <pre>
                 <code class="language-javascript">
 const Card3d = require("card3d");
 import Card3d from "card3d";
 import "card3d";
                 </code>
             </pre>
-            <h3>Without attributes in JS</h3>
-            <pre>
+        <h3>Without attributes in JS</h3>
+        <pre>
                 <code>
 //all attributes can ba placed as configuration (data-card3d-delta="0.8" -> delta: 0.8)
 const card = new Card3d(
     document.querySelector('.card'), 
-    { glare: 0.7 }
+    { glare: 0.7, glareOpacity: 0.7 }
 );
 
 //methods
+card.updateConfig();
 card.stop();
 card.start();
                 </code>
             </pre>
+      </div>
+
+      <div class="pres">
+        <h3 class="title">Simple example</h3>
+        <div class="card-container">
+          <div class="card" data-card3d></div>
         </div>
-
-
-        <div class="pres">
-            <h3 class="title">Simple example</h3>
-            <div class="card-container">
-                <div class="card" data-card3d></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example with glare</h3>
-            <div class="card-container">
-                <div class="card card2"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example with glare</h3>
+        <div class="card-container">
+          <div class="card card2"></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
-    <div data-card3d data-card3d-glare="0.7"></div>
+    <div data-card3d data-card3d-glare data-card3d-glare-opacity="0.7"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example with other perspective and delta</h3>
-            <div class="card-container">
-                <div class="card card3" data-card3d data-card3d-perspective="1000" data-card3d-delta="40"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example with other perspective and delta</h3>
+        <div class="card-container">
+          <div
+            class="card card3"
+            data-card3d
+            data-card3d-perspective="1000"
+            data-card3d-delta="40"
+          ></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d  data-card3d-perspective="1000" data-card3d-delta="40"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example reversed</h3>
-            <div class="card-container">
-                <div class="card card4" data-card3d data-card3d-reverse="true"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example reversed</h3>
+        <div class="card-container">
+          <div class="card card4" data-card3d data-card3d-reverse="true"></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d data-card3d-reverse="true"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example with no reset</h3>
-            <div class="card-container">
-                <div class="card card5" data-card3d data-card3d-reset="false"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example with no reset</h3>
+        <div class="card-container">
+          <div class="card card5" data-card3d data-card3d-no-reset="true"></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
-    <div data-card3d data-card3d-reset="false"></div>
+    <div data-card3d data-card3d-no-reset="true"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example with full page listening</h3>
-            <div class="card-container">
-                <div class="card card6" data-card3d data-card3d-full-page-listening="true"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example with full page listening</h3>
+        <div class="card-container">
+          <div
+            class="card card6"
+            data-card3d
+            data-card3d-full-page-listening="true"
+          ></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d data-card3d-full-page-listening="true"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example with scale</h3>
-            <div class="card-container">
-                <div class="card card7" data-card3d data-card3d-scale="1.1"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example with scale</h3>
+        <div class="card-container">
+          <div class="card card7" data-card3d data-card3d-scale="1.1"></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d data-card3d-scale="1.1"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example with start X and Y</h3>
-            <div class="card-container">
-                <div class="card card8" data-card3d data-card3d-start-x="20" data-card3d-start-y="20"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example with start X and Y</h3>
+        <div class="card-container">
+          <div
+            class="card card8"
+            data-card3d
+            data-card3d-start-x="20"
+            data-card3d-start-y="20"
+          ></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d data-card3d-start-x="20" data-card3d-start-y="20"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">Simple example with axis</h3>
-            <div class="card-container">
-                <div class="card card9" data-card3d data-card3d-axis="x"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">Simple example with axis</h3>
+        <div class="card-container">
+          <div class="card card9" data-card3d data-card3d-axis="x"></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d  data-card3d-axis="x"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
 
-        <div class="pres">
-            <h3 class="title">How to stop</h3>
-            <div class="card-container">
-                <div class="card card10" data-card3d data-card3d-stop="true"></div>
-            </div>
-            <!-- CODE -->
-            <h3>HTML</h3>
-            <pre>
+      <div class="pres">
+        <h3 class="title">
+          Use gyroscopie/device orientation on mobile (only android) [beta]
+        </h3>
+        <div class="card-container">
+          <div class="card card11" data-card3d data-card3d-gyroscopie></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
+                <code class="language-html">
+    <div data-card3d  data-card3d-gyroscopie></div>
+                </code>
+            </pre>
+        <!-- END CODE -->
+      </div>
+
+      <div class="pres">
+        <h3 class="title">How to stop</h3>
+        <div class="card-container">
+          <div class="card card10" data-card3d data-card3d-stop="true"></div>
+        </div>
+        <!-- CODE -->
+        <h3>HTML</h3>
+        <pre>
                 <code class="language-html">
     <div data-card3d data-card3d-stop="true"></div>
                 </code>
             </pre>
-            <!-- END CODE -->
-        </div>
+        <!-- END CODE -->
+      </div>
     </div>
-</body>
-<script>
-    document.querySelectorAll("code.language-html").forEach(function(element) {
-        element.innerHTML = element.innerHTML.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+  </body>
+  <script>
+    document.querySelectorAll("code.language-html").forEach(function (element) {
+      element.innerHTML = element.innerHTML
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
     });
 
-    const glare = new Card3d(document.querySelector('.card2'), {
-        glare: 0.7
+    const glare = new Card3d(document.querySelector(".card2"), {
+      glare: true,
+      glareOpacity: 0.7,
     });
-</script>
+  </script>
 </html>

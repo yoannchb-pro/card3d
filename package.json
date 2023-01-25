@@ -1,7 +1,7 @@
 {
   "name": "card3d",
-  "version": "2.5.1",
-  "description": "Create 3d card like vanilla tilt js",
+  "version": "2.6.0",
+  "description": "Create 3d card effect for your website with only attributes",
   "main": "./dist/card3d.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,10 +25,8 @@
   },
   "homepage": "https://github.com/yoannchb-pro/card3d#readme",
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.12",
-    "@babel/preset-env": "^7.16.11",
-    "@rollup/plugin-babel": "^5.3.1",
-    "@rollup/plugin-commonjs": "^22.0.2"
+    "@types/node": "^18.7.5",
+    "rollup-plugin-ts": "^3.0.2",
+    "typescript": "^4.7.4"
   }
 }

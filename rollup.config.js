@@ -1,9 +1,8 @@
-const commonjs = require("@rollup/plugin-commonjs")
-const { babel } = require("@rollup/plugin-babel")
+const ts = require("rollup-plugin-ts");
 const pkg = require("./package.json");
 
 export default {
-  input: "./src/card3d.js",
+  input: "./src/card3d.ts",
   output: [
     {
       file: pkg.main,
@@ -12,5 +11,5 @@ export default {
       sourcemap: true,
     },
   ],
-  plugins: [commonjs(), babel({ babelHelpers: "bundled" })],
+  plugins: [ts()],
 };
