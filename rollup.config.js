@@ -2,7 +2,7 @@ const ts = require("rollup-plugin-ts");
 const pkg = require("./package.json");
 
 export default {
-  input: "./src/card3d.ts",
+  input: "./src/index.ts",
   output: [
     {
       file: pkg.main,

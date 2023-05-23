@@ -1,9 +1,16 @@
 {
   "name": "card3d",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "description": "Create 3d card effect for your website with only attributes",
   "main": "./dist/card3d.js",
   "types": "./dist/card3d.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "tsconfig.json",
+    "LICENSE"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c"

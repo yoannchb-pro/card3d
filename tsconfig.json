@@ -9,8 +9,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": "src",
-    "declaration": true,
-    "typeRoots": ["types"]
+    "declaration": true
   },
   "include": ["src/**/*"]
 }
