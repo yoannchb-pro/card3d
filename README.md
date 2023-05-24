@@ -15,7 +15,7 @@ $ npm i card3d
 or from the cdn
 
 ```html
-<script src="https://unpkg.com/card3d@2.6.3/dist/card3d.js"></script>
+<script src="https://unpkg.com/card3d@2.6.4/dist/card3d.js"></script>
 ```
 
 ## Documentation

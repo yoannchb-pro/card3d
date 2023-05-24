@@ -24,9 +24,10 @@ declare class Card3d {
     private eventDeviceOrientation;
     constructor(card3dElement: HTMLElement, config?: Config);
     /**
-     * Update config when attributes change
+     * Update config
+     * @param config
      */
-    updateConfig(): void;
+    updateConfig(config?: Config): void;
     /**
      * Set the configuration based on the attributes
      * @returns

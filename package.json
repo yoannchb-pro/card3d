@@ -1,6 +1,6 @@
 {
   "name": "card3d",
-  "version": "2.6.3",
+  "version": "2.6.4",
   "description": "Create 3d card effect for your website with only attributes",
   "main": "./dist/card3d.js",
   "types": "./dist/card3d.d.ts",
@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/yoannchb-pro/card3d#readme",
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.3",
     "@types/node": "^18.7.5",
     "rollup-plugin-ts": "^3.0.2",
     "typescript": "^4.7.4"

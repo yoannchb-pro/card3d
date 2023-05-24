@@ -1,4 +1,5 @@
 const ts = require("rollup-plugin-ts");
+const terser = require("@rollup/plugin-terser");
 const pkg = require("./package.json");
 
 export default {
@@ -11,5 +12,5 @@ export default {
       sourcemap: true,
     },
   ],
-  plugins: [ts()],
+  plugins: [ts(), terser()],
 };

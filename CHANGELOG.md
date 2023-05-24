@@ -1,4 +1,9 @@
-# Changelog
+# CHANGELOG
+
+## 2.6.4
+
+- Minimified file
+- Fixed constructor
 
 ## 2.6.3
 

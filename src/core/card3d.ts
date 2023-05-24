@@ -40,15 +40,16 @@ class Card3d {
   }
 
   /**
-   * Update config when attributes change
+   * Update config
+   * @param config
    */
-  updateConfig() {
-    this.config = this.setConfigFromAttributes();
+  updateConfig(config?: Config) {
+    this.config = config ?? this.setConfigFromAttributes();
 
     if (this.config.stop) {
       this.stop();
     } else {
-      this.reset();
+      this.stop();
       this.start();
     }
   }
