@@ -15,7 +15,7 @@ type Config = {
 };
 declare class Card3d {
     private card3dElement;
-    config?: Config;
+    config: Config;
     private glareElement;
     private focusElement;
     private gyroOrigin;
@@ -28,11 +28,6 @@ declare class Card3d {
      * @param config
      */
     updateConfig(config?: Config): void;
-    /**
-     * Set the configuration based on the attributes
-     * @returns
-     */
-    private setConfigFromAttributes;
     /**
      * Remove all event listener of the card
      */

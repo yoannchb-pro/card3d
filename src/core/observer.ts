@@ -1,6 +1,9 @@
 import { findCardIndex, parseBooleanAttribute } from "utils";
 import { Card3dElements } from "./card3d";
-import Card3dAttributesHandler from "./attr-handler";
+import {
+  Card3dAttributesHandler,
+  getConfigFromAttributes,
+} from "./attr-handler";
 
 /**
  * Create the observer to add new card, remove card or change card on attribute change
@@ -25,7 +28,9 @@ function Card3dObserver() {
         if (isNewCard) {
           addedNodes.push(element);
         } else if (cardAlreadyExist) {
-          Card3dElements[cardIndex].instance.updateConfig();
+          Card3dElements[cardIndex].instance.updateConfig(
+            getConfigFromAttributes(Card3dElements[cardIndex].element)
+          );
         }
       }
 

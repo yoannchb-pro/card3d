@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2.6.5
+
+- Fixed updateConfig
+- Removed private method `setConfigFromAttributes` for function `getConfigFromAttributes`
+
 ## 2.6.4
 
 - Minimified file

@@ -1,8 +1,4 @@
-import {
-  findCardIndex,
-  parseBooleanAttribute,
-  parseFloatAttrbiutes,
-} from "utils";
+import { findCardIndex } from "utils";
 import Config from "../types/config";
 import EventListener from "../types/eventListener";
 
@@ -28,10 +24,8 @@ class Card3d {
   private eventMouseOut: EventListener<MouseEvent>;
   private eventDeviceOrientation: EventListener<DeviceOrientationEvent>;
 
-  constructor(private card3dElement: HTMLElement, public config?: Config) {
+  constructor(private card3dElement: HTMLElement, public config: Config = {}) {
     Card3dElements.push({ element: card3dElement, instance: this });
-
-    if (!this.config) this.config = this.setConfigFromAttributes();
 
     this.config = Object.assign({}, defaultConfig, this.config);
 
@@ -43,8 +37,8 @@ class Card3d {
    * Update config
    * @param config
    */
-  updateConfig(config?: Config) {
-    this.config = config ?? this.setConfigFromAttributes();
+  updateConfig(config: Config = {}) {
+    this.config = Object.assign({}, defaultConfig, config);
 
     if (this.config.stop) {
       this.stop();
@@ -52,57 +46,6 @@ class Card3d {
       this.stop();
       this.start();
     }
-  }
-
-  /**
-   * Set the configuration based on the attributes
-   * @returns
-   */
-  private setConfigFromAttributes(): Config {
-    const attr = this.card3dElement.dataset;
-
-    const fullPageListening = parseBooleanAttribute(
-      attr.card3dFullPageListening
-    );
-    const noReset = parseBooleanAttribute(attr.card3dNoReset);
-    const glare = parseBooleanAttribute(attr.card3dGlare);
-    const reverse = parseBooleanAttribute(attr.card3dReverse);
-    const stop = parseBooleanAttribute(attr.card3dStop);
-    const gyroscopie = parseBooleanAttribute(attr.card3dGyroscopie);
-
-    const delta = parseFloatAttrbiutes(attr.card3dDelta) ?? defaultConfig.delta;
-    const perspective =
-      parseFloatAttrbiutes(attr.card3dPerspective) ?? defaultConfig.perspective;
-    const startX =
-      parseFloatAttrbiutes(attr.card3dStartX) ?? defaultConfig.startX;
-    const startY =
-      parseFloatAttrbiutes(attr.card3dStartY) ?? defaultConfig.startY;
-    const glareOpacity =
-      parseFloatAttrbiutes(attr.card3dGlare) ?? defaultConfig.glareOpacity;
-    const scale = parseFloatAttrbiutes(attr.card3dScale) ?? defaultConfig.scale;
-
-    let axis: Config["axis"] = "all";
-    if (attr.card3dAxis === "x") {
-      axis = "x";
-    } else if (attr.card3dAxis === "y") {
-      axis = "y";
-    }
-
-    return {
-      gyroscopie,
-      stop,
-      scale,
-      delta,
-      axis,
-      noReset,
-      reverse,
-      fullPageListening,
-      perspective,
-      startX,
-      startY,
-      glare,
-      glareOpacity,
-    };
   }
 
   /**
@@ -316,4 +259,4 @@ class Card3d {
   }
 }
 
-export { Card3d, Card3dElements };
+export { Card3d, Card3dElements, defaultConfig };

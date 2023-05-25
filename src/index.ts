@@ -1,5 +1,5 @@
 import Card3dObserver from "core/observer";
-import Card3dAttributesHandler from "core/attr-handler";
+import { Card3dAttributesHandler } from "core/attr-handler";
 import { Card3d } from "core/card3d";
 
 document.addEventListener("DOMContentLoaded", function () {

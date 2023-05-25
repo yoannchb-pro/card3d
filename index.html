@@ -54,7 +54,7 @@ npm i card3d
         <h3>CDN</h3>
         <pre>
                 <code class="language-html">
-https://unpkg.com/card3d@2.6.4/dist/card3d.js
+https://unpkg.com/card3d@2.6.5/dist/card3d.js
                 </code>
             </pre>
         <h3>Import</h3>
@@ -85,7 +85,7 @@ card.start();
       <div class="pres">
         <h3 class="title">Simple example</h3>
         <div class="card-container">
-          <div class="card" data-card3d></div>
+          <div class="card"></div>
         </div>
         <!-- CODE -->
         <h3>HTML</h3>
@@ -271,6 +271,8 @@ card.start();
         .replace(/"/g, "&quot;")
         .replace(/'/g, "&#039;");
     });
+
+    const card3d = new Card3d(document.querySelector(".card"));
 
     const glare = new Card3d(document.querySelector(".card2"), {
       glare: true,

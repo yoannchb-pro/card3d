@@ -1,6 +1,6 @@
 {
   "name": "card3d",
-  "version": "2.6.4",
+  "version": "2.6.5",
   "description": "Create 3d card effect for your website with only attributes",
   "main": "./dist/card3d.js",
   "types": "./dist/card3d.d.ts",
